@@ -1,6 +1,6 @@
-empty_arg = Proc.new {puts "This block should not run!"}
+empty_arg = lambda {puts "This block should not run!"}
 
-def my_each(array)
+def my_each(array, &empty_arg)
   if block_given?
     i=0
     while i<array.length
@@ -8,7 +8,7 @@ def my_each(array)
       i+=1
     end
   else
-    empty_arg.call
+    empty_arg
   end
 end
 
