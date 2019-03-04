@@ -1,6 +1,4 @@
-no_block = Proc.new {puts "No block given for yield"}
-
-def my_each(array, x= no_block.call)
+def my_each(array)
   if block_given?
     i=0
     while i<array.length
@@ -8,6 +6,6 @@ def my_each(array, x= no_block.call)
       i+=1
     end
   else
-    x
+    print "No block given for yield"
   end
 end
