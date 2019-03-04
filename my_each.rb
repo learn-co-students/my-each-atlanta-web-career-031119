@@ -6,6 +6,6 @@ def my_each(array)
       i+=1
     end
   else
-    print "No block given for yield"
+    return array
   end
 end
