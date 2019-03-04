@@ -9,5 +9,3 @@ def my_each(array)
     puts "No block given for yield"
   end
 end
-
-my_each(array) {|item| puts item}
