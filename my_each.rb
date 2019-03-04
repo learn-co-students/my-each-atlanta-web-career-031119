@@ -1,5 +1,3 @@
-empty_arg = lambda {puts "This block should not run!"}
-
 def my_each(array, &empty_arg)
   if block_given?
     i=0
@@ -8,7 +6,7 @@ def my_each(array, &empty_arg)
       i+=1
     end
   else
-    empty_arg
+    puts "No block given for yield"
   end
 end
 
