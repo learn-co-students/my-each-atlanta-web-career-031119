@@ -5,6 +5,7 @@ def my_each(array)
       yield array[i]
       i+=1
     end
+    return array
   else
     return array
   end
